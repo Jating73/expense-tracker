@@ -46,7 +46,7 @@ export const getAllExpense = async (req, res) => {
             userId
         }
 
-        if (category !== "" && category.toLowercase() !== "all") {
+        if (category !== "" && category.toLowerCase() !== "all") {
             query.category = { $regex: category, $options: "i" }
         }
         if (done !== "") {
